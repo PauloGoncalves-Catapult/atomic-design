@@ -1,16 +1,16 @@
 import React from 'react';
 import { Text, Button } from '../atom';
 
-export const Counter = () => {
-    const [count, setCount] = React.useState(0);
+type CounterTypes = {
+    count: number;
+    onIncrease: () => void;
+}
 
-    const handleIncrease = () => setCount(count + 1);
-
+export const Counter: React.FC<CounterTypes> = ({ count, onIncrease }) => {
     return (
         <div>
-            <Text text="Counter Molecule" variation='h2' />
             <Text text={`${count}`} variation='h1' />
-            <Button text="Increase" onClick={handleIncrease} />
+            <Button text="Increase" onClick={onIncrease} />
         </div>
     )
 }

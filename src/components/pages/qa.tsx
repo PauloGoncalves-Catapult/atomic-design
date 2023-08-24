@@ -1,8 +1,19 @@
+// Libraries
 import React from 'react';
+
+// Atoms
 import { Text } from '../atom';
-import { DANGER_LIMIT_QA, LIMIT_QA } from './constant';
-import { useCounterProvider } from '../shared/use-counter-provider';
-import { Counter } from '../organisms';
+
+// Constants
+import { DANGER_LIMIT_QA } from '../../shared/constant';
+
+// Organisms
+import { LimitCounter } from '../organisms';
+
+// Provider
+import { useCounterProvider } from '../../provider/use-counter-provider';
+
+// Assets
 import bomb from '../../assets/bomb.png'
 import explosionFail from '../../assets/explosion.gif'
 
@@ -10,17 +21,19 @@ export const QA = () => {
     const { reachLimit } = useCounterProvider()
 
     return (
-        <>
-            <Text text="Q & A" variation='h1' />
-            <Counter limit={LIMIT_QA} dangerLimit={DANGER_LIMIT_QA} />
+        <div>
             {reachLimit ? (
                 <div style={{ marginTop: 30 }}>
                     <Text text="Thank you" variation='h1' />
-                    <img src={explosionFail} height={300} />
+                    <img src={explosionFail} height={200} />
                 </div>
             ) : (
-                <img src={bomb} alt="earth" height={300} />
+                <>
+                    <Text text="Q & A" variation='h1' />
+                    <LimitCounter dangerLimit={DANGER_LIMIT_QA} dangerColor='red' />
+                    <img src={bomb} height={300} />
+                </>
             )}
-        </>
+        </div>
     )
 }

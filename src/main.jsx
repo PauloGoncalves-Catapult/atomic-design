@@ -9,7 +9,8 @@ import {
 import { Atom } from './atom';
 import { Molecules } from './molecules';
 import { Organisms } from './organisms';
-import { QA } from './components/pages';
+import { Page } from './page';
+import { Templates } from './templates';
 
 const router = createBrowserRouter([
   {
@@ -25,8 +26,12 @@ const router = createBrowserRouter([
     element: <Organisms />,
   },
   {
+    path: "/templates",
+    element: <Templates />,
+  },
+  {
     path: "/pages",
-    element: <QA />,
+    element: <Page />,
   },
 ]);
 

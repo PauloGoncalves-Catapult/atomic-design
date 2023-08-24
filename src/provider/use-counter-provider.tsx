@@ -2,13 +2,13 @@ import React from 'react';
 
 type LimitCounterContextShape = {
     count: number;
-    setCount: (newCount: number) => void;
+    increaseCount: () => void;
     reachLimit: boolean;
 }
 
 export const LimitCounterContext = React.createContext<LimitCounterContextShape>({
     count: 0,
-    setCount: () => {},
+    increaseCount: () => {},
     reachLimit: false,
 })
 
@@ -21,14 +21,20 @@ export const CounterProvider: React.FC<CounterProviderType> = ({limit, children}
     const [count, setCount] = React.useState(0);
     const [reachLimit, setReachLimit] = React.useState(false);
 
-    React.useEffect(() => {
-        if (count > limit) {
+    const increaseCount = () => {
+        if (count > limit - 2) {
             setReachLimit(true);
         }
-    }, [count])
+        if (!reachLimit) {
+            setCount(count + 1);
+        } else {
+            setCount(0)
+            setReachLimit(false)
+        }
+    }
 
     return (
-        <LimitCounterContext.Provider value={{count, setCount, reachLimit}}>
+        <LimitCounterContext.Provider value={{count, increaseCount, reachLimit}}>
             {children}
         </LimitCounterContext.Provider>
     )
