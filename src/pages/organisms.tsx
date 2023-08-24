@@ -3,19 +3,19 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Atoms
-import { Button } from '../atom';
+import { Button } from '../components/atom';
 
 // Organisms
-import { LimitCounter } from '../organisms';
+import { LimitCounter } from '../components/organisms';
 
 // Constants
-import { DANGER_LIMIT, LIMIT } from '../../shared/constant';
+import { DANGER_LIMIT, LIMIT } from '../shared/constant';
 
 // Provider
-import { CounterProvider } from '../../provider/use-counter-provider';
+import { CounterProvider } from '../provider/use-counter-provider';
 
 // Assets
-import organisms from '../../assets/organisms.jpg';
+import organisms from '../assets/organisms.jpg';
 
 export const Organisms = () => {
     const navigate = useNavigate();

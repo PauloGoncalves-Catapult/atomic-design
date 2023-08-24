@@ -2,20 +2,20 @@
 import React from 'react';
 
 // Atoms
-import { Text } from '../atom';
-
-// Constants
-import { DANGER_LIMIT_QA } from '../../shared/constant';
+import { Text } from '../components/atom';
 
 // Organisms
-import { LimitCounter } from '../organisms';
+import { LimitCounter } from '../components/organisms';
 
 // Provider
-import { useCounterProvider } from '../../provider/use-counter-provider';
+import { useCounterProvider } from '../provider/use-counter-provider';
+
+// Constants
+import { DANGER_LIMIT_QA } from '../shared/constant';
 
 // Assets
-import bomb from '../../assets/bomb.png'
-import explosionFail from '../../assets/explosion.gif'
+import bomb from '../assets/bomb.png'
+import explosionFail from '../assets/explosion.gif'
 
 export const QA = () => {
     const { reachLimit } = useCounterProvider()

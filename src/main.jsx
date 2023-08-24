@@ -6,12 +6,16 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { Atom, Molecules, Organisms, Templates, Page } from './components/pages';
+import { Intro, Atoms, Molecules, Organisms, Templates, Pages } from './pages';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Atom />,
+    element: <Intro />,
+  },
+  {
+    path: "/atoms",
+    element: <Atoms />,
   },
   {
     path: "/molecules",
@@ -27,7 +31,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/pages",
-    element: <Page />,
+    element: <Pages />,
   },
 ]);
 

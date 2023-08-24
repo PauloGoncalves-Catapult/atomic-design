@@ -3,13 +3,13 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Atom
-import { Button } from '../atom';
+import { Button } from '../components/atom';
 
 // Molecules
-import { Counter } from '../molecules';
+import { Counter } from '../components/molecules';
 
 // Assets
-import molecules from '../../assets/molecules.jpg';
+import molecules from '../assets/molecules.jpg';
 
 export const Molecules = () => {
     const navigate = useNavigate();
