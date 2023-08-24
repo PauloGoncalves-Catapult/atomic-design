@@ -31,7 +31,7 @@ export const QA = () => {
                 <>
                     <Text text="Q & A" variation='h1' />
                     <LimitCounter dangerLimit={DANGER_LIMIT_QA} dangerColor='red' />
-                    <img src={bomb} height={300} />
+                    <img src={bomb} height={150} />
                 </>
             )}
         </div>
