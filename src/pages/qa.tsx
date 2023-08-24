@@ -21,12 +21,12 @@ export const QA = () => {
     const { reachLimit } = useCounterProvider()
 
     return (
-        <div>
+        <div style={{ marginTop: 20, paddingTop: 10 }}>
             {reachLimit ? (
-                <div style={{ marginTop: 30 }}>
+                <>
                     <Text text="Thank you" variation='h1' />
                     <img src={explosionFail} height={200} />
-                </div>
+                </>
             ) : (
                 <>
                     <Text text="Q & A" variation='h1' />
