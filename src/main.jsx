@@ -6,17 +6,27 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { Earth } from './components/ecosystem/earth';
-import { Organisms } from './components/organisms';
+import { Atom } from './atom';
+import { Molecules } from './molecules';
+import { Organisms } from './organisms';
+import { QA } from './components/pages';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Earth />,
+    element: <Atom />,
+  },
+  {
+    path: "/molecules",
+    element: <Molecules />,
   },
   {
     path: "/organisms",
     element: <Organisms />,
+  },
+  {
+    path: "/pages",
+    element: <QA />,
   },
 ]);
 
