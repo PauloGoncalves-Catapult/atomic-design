@@ -3,10 +3,10 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Atoms
-import { Text, Button } from './components/atom';
+import { Text, Button } from '../atom';
 
 // Assets
-import atom from './assets/atoms.jpg';
+import atom from '../../assets/atoms.jpg';
 
 export const Atom = () => {
     const navigate = useNavigate();

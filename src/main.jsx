@@ -6,11 +6,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import { Atom } from './atom';
-import { Molecules } from './molecules';
-import { Organisms } from './organisms';
-import { Page } from './page';
-import { Templates } from './templates';
+import { Atom, Molecules, Organisms, Templates, Page } from './components/pages';
 
 const router = createBrowserRouter([
   {

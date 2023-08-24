@@ -2,19 +2,20 @@
 import React from 'react';
 
 // Templates
-import { Header, Content, Footer } from './components/templates';
+import { Header, Content, Footer } from '../templates';
 
 // Pages
-import { QA } from './components/pages/qa';
+import { QA } from '../pages/qa';
 
-// Assets
-import pages from './assets/pages.jpg';
 
 // Provider
-import { CounterProvider } from './provider/use-counter-provider';
+import { CounterProvider } from '../../provider/use-counter-provider';
 
 // Constants
-import { LIMIT_QA } from './shared/constant';
+import { LIMIT_QA } from '../../shared/constant';
+
+// Assets
+import pages from '../../assets/pages.jpg';
 
 export const Page = () => {
     return (

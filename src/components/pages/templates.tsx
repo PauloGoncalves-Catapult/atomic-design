@@ -3,22 +3,22 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 // Atoms
-import { Button, Text } from './components/atom';
+import { Button, Text } from '../atom';
 
 // Organisms
-import { LimitCounter } from './components/organisms';
+import { LimitCounter } from '../organisms';
 
 // Templates
-import { Header, Content, Footer } from './components/templates';
-
-// Assets
-import templates from './assets/templates.jpg';
+import { Header, Content, Footer } from '../templates';
 
 // Provider
-import { CounterProvider } from './provider/use-counter-provider';
+import { CounterProvider } from '../../provider/use-counter-provider';
 
 // Constants
-import { LIMIT } from './shared/constant';
+import { LIMIT } from '../../shared/constant';
+
+// Assets
+import templates from '../../assets/templates.jpg';
 
 export const Templates = () => {
     const navigate = useNavigate();
