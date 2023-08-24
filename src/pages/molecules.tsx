@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/atom';
 
 // Molecules
-import { Counter } from '../components/molecules';
+import { Counter, Descriptor } from '../components/molecules';
 
 // Assets
 import molecules from '../assets/molecules.jpg';
@@ -19,10 +19,10 @@ export const Molecules = () => {
     
     return (
         <div>
-            <img src={molecules} height={200} />
+            <Descriptor image={molecules} description="Group of atoms to build functionalities" />
             <Counter count={count} onIncrease={handleIncrease} />
             <div style={{ marginTop: 100 }}>
-                <Button text="Explore Organisms" onClick={() => navigate('/organisms')} />
+                <Button text="Organisms" onClick={() => navigate('/organisms')} backgroundColor='orange' />
             </div>
         </div>
     )

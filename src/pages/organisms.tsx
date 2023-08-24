@@ -8,6 +8,9 @@ import { Button } from '../components/atom';
 // Organisms
 import { LimitCounter } from '../components/organisms';
 
+// Molecules
+import { Descriptor } from '../components/molecules';
+
 // Constants
 import { DANGER_LIMIT, LIMIT } from '../shared/constant';
 
@@ -22,10 +25,10 @@ export const Organisms = () => {
 
     return (
         <CounterProvider limit={LIMIT} >
-            <img src={organisms} height={200} />
+            <Descriptor image={organisms} description="Combining molecules together to form organisms that make functional interfaces" />
             <LimitCounter dangerLimit={DANGER_LIMIT} dangerColor='red' />
             <div style={{ marginTop: 100 }}>
-                <Button text="Explore Templates" onClick={() => navigate('/templates')} />
+                <Button text="Templates" onClick={() => navigate('/templates')} backgroundColor='orange' />
             </div>
         </CounterProvider>
     )

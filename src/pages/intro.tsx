@@ -6,19 +6,18 @@ import { useNavigate } from 'react-router-dom';
 import { Text, Button } from '../components/atom';
 
 // Assets
-// import atom from '../../assets/atoms.jpg';
+import atomicDesign from '../assets/atomic-design.png';
+import { Descriptor } from '../components/molecules';
 
 export const Intro = () => {
     const navigate = useNavigate();
 
     return (
         <div>
-            {/* <img src={atom} height={200} /> */}
             <Text text="Atomic Design" variation='h1' color='orange' />
-            <Text text="What is?" variation='h2' />
-            <Text text="Describing here" />
+            <Descriptor image={atomicDesign} />
             <div style={{ marginTop: 100 }}>
-                <Button text="Explore Atom" onClick={() => navigate('/atoms')} />
+                <Button text="Atom" onClick={() => navigate('/atoms')} backgroundColor='orange' />
             </div>
         </div>
     )
