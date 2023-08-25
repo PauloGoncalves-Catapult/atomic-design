@@ -1,6 +1,3 @@
-// Libraries
-import React from 'react';
-
 // Atoms
 import { Text } from '../components/atom';
 

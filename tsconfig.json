@@ -1,0 +1,29 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "lib": ["DOM", "ES2021", "dom.iterable"],
+        "jsx": "react-jsx",
+        "target": "ES2019",
+        "module": "esnext",
+        "moduleResolution": "node",
+        "noImplicitAny": true,
+        "removeComments": false,
+        "preserveConstEnums": true,
+        "skipLibCheck": true,
+        "resolveJsonModule": true,
+        "declaration": true,
+        "typeRoots": ["./@types", "node_modules/@types"],
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "isolatedModules": true,
+        "allowJs": false,
+        "strict": true,
+        "baseUrl": "src/",
+        "types": ["node", "webpack-env", "jest", "@testing-library/jest-dom"],
+        "noFallthroughCasesInSwitch": true
+    },
+    "include": ["**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules", "test"]
+}

@@ -1,4 +1,7 @@
+// Libraries
 import React from 'react';
+
+// Atoms
 import { Text } from '../atom';
 
 type CounterTypes = {
