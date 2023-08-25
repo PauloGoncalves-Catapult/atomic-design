@@ -27,6 +27,7 @@ export const QA = () => {
             ) : (
                 <>
                     <Text text="Q & A" variation='h1' />
+                    <Text text="Let's explode the BOMB" variation='h2' />
                     <LimitCounter dangerLimit={DANGER_LIMIT_QA} dangerColor='red' />
                     <img src={bomb} height={150} />
                 </>

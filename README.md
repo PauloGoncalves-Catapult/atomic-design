@@ -1,8 +1,21 @@
-# React + Vite
+# Atomic Design
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What is Atomic Design?
+Atomic design is a methodology composed of five distinct stages working together to create interface design systems in a more deliberate and hierarchical manner.
 
-Currently, two official plugins are available:
+## What Atomic Design is NOT?
+* Easier to learn
+* Easier to develop
+* Nicer looking
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## What Atomic Design IS?
+* Speed up development
+* Promote consistency
+* Collaborative workflow
+* Establish a shared vocabulary
+* Provide documentation
+* Help creates cross-browser/device, performance, and accessibility
+* Set the friendly foundation for teams to modify, extend, and improve on over time.
+
+## Reference
+* https://atomicdesign.bradfrost.com
