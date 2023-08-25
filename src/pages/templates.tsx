@@ -8,7 +8,7 @@ import { Button, Text } from '../components/atom';
 import { LimitCounter } from '../components/organisms';
 
 // Templates
-import { Header, Content, Footer } from '../components/templates';
+import { Header, Content, Footer, ContentWrapper } from '../components/templates';
 
 // Provider
 import { CounterProvider } from '../provider/use-counter-provider';
@@ -17,7 +17,7 @@ import { CounterProvider } from '../provider/use-counter-provider';
 import { Descriptor } from '../components/molecules';
 
 // Constants
-import { LIMIT } from '../shared/constant';
+import { DANGER_LIMIT, LIMIT } from '../shared/constant';
 
 // Assets
 import templates from '../assets/templates.jpg';
@@ -28,14 +28,16 @@ export const Templates = () => {
     return (
         <CounterProvider limit={LIMIT} >
             <Descriptor image={templates} description="Consisting mostly of groups of organisms to form a page" />
-            <div style={{ width: 800 }}>
+            <div style={{ display: 'flex', flexDirection: 'column', margin: '0 100px 0 100px' }}>
                 <Header />
                 <Content>
-                    <Text text='Content' variation='h2' />
-                    <LimitCounter dangerLimit={10} dangerColor='red' />
-                    <div style={{ marginTop: 100 }}>
-                        <Button text="Pages" onClick={() => navigate('/pages')}  backgroundColor='orange'/>
-                    </div>
+                    <ContentWrapper>
+                        <Text text='Content' variation='h2' />
+                        <LimitCounter dangerLimit={DANGER_LIMIT} dangerColor='red' />
+                        <div style={{ marginTop: 100 }}>
+                            <Button text="Pages" onClick={() => navigate('/pages')}  backgroundColor='orange'/>
+                        </div>
+                    </ContentWrapper>
                 </Content>
                 <Footer />
             </div>

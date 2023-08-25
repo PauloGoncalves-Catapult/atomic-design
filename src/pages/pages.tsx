@@ -19,7 +19,7 @@ import { LIMIT_QA } from '../shared/constant';
 export const Pages = () => {
     return (
         <CounterProvider limit={LIMIT_QA} >
-            <div style={{ width: 800 }}>
+            <div style={{ margin: '100px 100px 0 100px' }}>
                 <Header />
                 <Content>
                     <QA />

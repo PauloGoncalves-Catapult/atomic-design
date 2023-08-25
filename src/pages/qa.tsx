@@ -4,6 +4,9 @@ import { Text } from '../components/atom';
 // Organisms
 import { LimitCounter } from '../components/organisms';
 
+// Templates
+import { ContentWrapper } from '../components/templates';
+
 // Provider
 import { useCounterProvider } from '../provider/use-counter-provider';
 
@@ -18,7 +21,8 @@ export const QA = () => {
     const { reachLimit } = useCounterProvider()
 
     return (
-        <div style={{ marginTop: 20, paddingTop: 10 }}>
+        <ContentWrapper>
+
             {reachLimit ? (
                 <>
                     <Text text="Thank you" variation='h1' />
@@ -26,12 +30,12 @@ export const QA = () => {
                 </>
             ) : (
                 <>
-                    <Text text="Q & A" variation='h1' />
-                    <Text text="Let's explode the BOMB" variation='h2' />
+                    <Text text="Q&A" variation='h2' />
+                    <Text text="DETONATE THE BOMB" />
                     <LimitCounter dangerLimit={DANGER_LIMIT_QA} dangerColor='red' />
                     <img src={bomb} height={150} />
                 </>
             )}
-        </div>
+        </ContentWrapper>
     )
 }

@@ -8,6 +8,9 @@ import { Button } from '../components/atom';
 // Molecules
 import { Counter, Descriptor } from '../components/molecules';
 
+// Templates
+import { ContentWrapper } from '../components/templates';
+
 // Assets
 import molecules from '../assets/molecules.jpg';
 
@@ -20,10 +23,12 @@ export const Molecules = () => {
     return (
         <div>
             <Descriptor image={molecules} description="Group of atoms to build functionalities" />
-            <Counter count={count} onIncrease={handleIncrease} />
-            <div style={{ marginTop: 100 }}>
-                <Button text="Organisms" onClick={() => navigate('/organisms')} backgroundColor='orange' />
-            </div>
+            <ContentWrapper>
+                <Counter count={count} onIncrease={handleIncrease} />
+                <div style={{ marginTop: 100 }}>
+                    <Button text="Organisms" onClick={() => navigate('/organisms')} backgroundColor='orange' />
+                </div>
+            </ContentWrapper>
         </div>
     )
 }

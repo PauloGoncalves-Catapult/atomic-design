@@ -13,7 +13,7 @@ export const Descriptor: React.FC<CounterTypes> = ({ description, image }) => {
     return (
         <>
             <div>
-                <img src={image} height={200} />
+                <img src={image} height={120} />
             </div>
             {description ? (
                 <>
