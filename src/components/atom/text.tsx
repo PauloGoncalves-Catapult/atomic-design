@@ -1,7 +1,7 @@
 import React from 'react';
 
 type TextType = {
-    text: string;
+    text: string | React.ReactNode;
     variation?: 'text' | 'h1' | 'h2' ;
     color?: string;
 }
