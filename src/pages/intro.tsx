@@ -29,14 +29,14 @@ export const Intro = () => {
             <Descriptor image={atomicDesign} />
             <ContentWrapper>
                 <Text text={
-                    <div style={{ margin: '0 200px 0 200px' }}>
-                    <strong>What Atomic Design is NOT?</strong>
+                    <div style={{ margin: '0 120px 0 120px' }}>
+                    What Atomic Design<strong> IS NOT</strong>
                     <ul style={{ display: 'flex', flexDirection: 'column', alignItems: 'start'}}>
                         <li>Easier to learn</li>
                         <li>Easier to develop</li>
                         <li>Nicer looking</li>
                     </ul>
-                    <strong> What Atomic Design IS</strong>
+                    What Atomic Design<strong> IS</strong>
                     <ul style={{ display: 'flex', flexDirection: 'column', alignItems: 'start'}}>
                         <li>Speed up development</li>
                         <li>Promote consistency</li>

@@ -21,7 +21,6 @@
         "allowJs": false,
         "strict": true,
         "baseUrl": "src/",
-        "types": ["node", "webpack-env", "jest", "@testing-library/jest-dom"],
         "noFallthroughCasesInSwitch": true
     },
     "include": ["**/*.ts", "**/*.tsx"],
